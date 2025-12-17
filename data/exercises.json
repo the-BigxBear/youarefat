@@ -1,0 +1,20 @@
+[
+  {
+    "id": "move_1766008900557",
+    "name": "پرس سینه",
+    "category": "chest",
+    "videoUrl": "videos\\BarbellBenchPress_front.mp4",
+    "sets": 4,
+    "reps": "10",
+    "description": "سنگین"
+  },
+  {
+    "id": "move_1766008959492",
+    "name": "پرس سینه",
+    "category": "chest",
+    "videoUrl": "videos\\BarbellBenchPress_front.mp4",
+    "sets": 3,
+    "reps": "12",
+    "description": "سبک"
+  }
+]
