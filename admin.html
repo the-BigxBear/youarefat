@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت | باشگاه من</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#dc3545">
+</head>
+<body style="background-color: #f0f2f5;">
+
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 style="color: var(--danger-color);">🛠️ پنل ساخت تمرین</h2>
+            <p class="text-muted">حرکات را اضافه کنید و خروجی را در فایل json قرار دهید.</p>
+            <a href="index.html" class="btn btn-outline" style="width: auto; padding: 5px 15px; font-size: 0.8rem;">بازگشت به خانه</a>
+        </div>
+
+        <div class="admin-form">
+            <h3 class="mb-4">افزودن حرکت جدید</h3>
+            
+            <form id="exercise-form">
+                <div class="form-group">
+                    <label>نام حرکت:</label>
+                    <input type="text" id="ex-name" placeholder="مثال: شنا سوئدی" required>
+                </div>
+
+                <div class="form-group">
+                    <label>دسته‌بندی (انگلیسی):</label>
+                    <select id="ex-category">
+                        <option value="chest">سینه (Chest)</option>
+                        <option value="back">زیربغل (Back)</option>
+                        <option value="legs">پا (Legs)</option>
+                        <option value="shoulders">سرشانه (Shoulders)</option>
+                        <option value="arms">دست (Arms)</option>
+                        <option value="abs">شکم (Abs)</option>
+                        <option value="cardio">هوازی (Cardio)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>آدرس فایل ویدیو:</label>
+                    <input type="text" id="ex-video" placeholder="مثال: videos/pushup.mp4" required>
+                    <small class="text-muted">فایل ویدیو باید در پوشه videos باشد.</small>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="form-group">
+                        <label>تعداد ست:</label>
+                        <input type="number" id="ex-sets" value="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label>تعداد تکرار:</label>
+                        <input type="text" id="ex-reps" value="12" placeholder="مثال: 12 یا 1 دقیقه">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>توضیحات (اختیاری):</label>
+                    <textarea id="ex-desc" rows="3" placeholder="نکات فنی حرکت..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">➕ افزودن به لیست</button>
+            </form>
+        </div>
+
+        <div class="admin-form" id="preview-section" style="display:none;">
+            <h3>لیست آماده شده (<span id="count-badge">0</span>)</h3>
+            <ul id="added-list" style="list-style: none; padding: 0; margin-bottom: 20px;">
+                </ul>
+
+            <label>کد نهایی (JSON):</label>
+            <textarea id="json-output" class="json-output" rows="10" readonly></textarea>
+            
+            <div class="mt-2">
+                <button id="copy-btn" class="btn btn-primary mb-2">📋 کپی کد JSON</button>
+                <button id="clear-btn" class="btn btn-danger">❌ پاک کردن همه</button>
+            </div>
+            
+            <p class="mt-2 text-muted" style="font-size: 0.85rem;">
+                <strong>راهنما:</strong> دکمه کپی را بزنید و محتوا را جایگزین کل متن داخل فایل <code>data/exercises.json</code> کنید.
+            </p>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

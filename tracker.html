@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>گزارش عملکرد | باشگاه من</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d6efd">
+</head>
+<body id="page-tracker">
+
+    <div id="offline-badge"></div>
+
+    <div class="container">
+        <h2 class="text-center mb-4 mt-2">عملکرد شما</h2>
+
+        <div class="stats-grid mb-4">
+            <div class="stat-box" style="grid-column: span 2; background-color: #e9ecef;">
+                <div class="stat-value" id="total-workouts" style="font-size: 2rem; color: var(--primary-color);">0</div>
+                <div class="stat-label">تعداد کل حرکات انجام شده</div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">تاریخچه اخیر:</h3>
+        
+        <div id="history-list">
+            </div>
+
+        <div class="mt-2 text-center">
+            <button id="clear-history" class="btn btn-danger" style="margin-top: 20px;">🗑️ پاک کردن کل تاریخچه</button>
+        </div>
+
+        <div style="height: 60px;"></div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>خانه</span>
+        </a>
+        <a href="workout.html" class="nav-item">
+            <span class="nav-icon">🏋️</span>
+            <span>تمرین</span>
+        </a>
+        <a href="tracker.html" class="nav-item active">
+            <span class="nav-icon">📊</span>
+            <span>گزارش</span>
+        </a>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
